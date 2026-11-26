@@ -1,9 +1,12 @@
 # EX.No.-2.2 CREATE A 3D SOLID MODEL FROM ISOMETRIC DRAWING
-## Date :
+## Date :15-10-2026
 
 ## AIM: 
 
-To create a 3Dmodel from the given isometric drawing using fusion 360 tool. 
+To design and construct a 3D CAD solid model of the given
+mechanical bracket component using parametric 3D modeling
+software, adhering precisely to all dimensional parameters given
+in the isometric drawing.
 
 ## REQUIREMENTS:
 1. Autodesk fusion 360
@@ -11,102 +14,116 @@ To create a 3Dmodel from the given isometric drawing using fusion 360 tool.
 3. 16 GB of RAM (integrated graphics recommend 1 GB or more)
 4. 2.5 Mbps or faster download; 500 Kbps or faster upload 
 
-## STEP-2:  Select the Sketch Plane
- Select the TOP (XY) Plane
-
-## STEP-3: Create a Sketch 
-1.  Select Sketch > Rectangle > Center Rectangle.
-2.  Now hover over the origin (center) of the sketch. You should see the cursor snap to this location.
-3.  Click once to begin placing the rectangle.
-4.  Type the Tab button and enter the values 56 mm and 18mm for the width and height respectively.
-5.  Select Sketch > Arc > Center point arc.
-6.  Click again to place the value (Both end of the sketch). You should see the cursor snap to this location
-7.  Type the Tab button and enter the values R 18mm
-8.  Select Sketch > circle > Center point circle.
-9.  Click again to place the value (Both side of the sketch). You should see the cursor snap to this location
-10. Type the Tab button and enter the values dia 16mm
-11. Click again to place the sketch.
-12. Click Finish Sketch after completing.
-
-## STEP-4: Extrude Sketch in XY Plane
-1.	Select Extrude.
-2.	Select the sketch.
-3.	Click again to place the value.
-4.	Type in the value of 8mm. 
-5.	Press ENTER to accept the value.
-
-## STEP-5:  Start the sketch command
-   Select Sketch > Create Sketch.
-
-## STEP-6: Select the Sketch Plane
-	Select the TOP SURFACE of the 3D block 
+Key Dimensions Summary
+* **Base Plate:** * Length between arc centers: 56𝑚𝑚
+* End radius: 𝑅18𝑚𝑚
+* Thickness: 8𝑚𝑚 (Width = 36𝑚𝑚 )
+* Two holes: $\varnothing16\text{ mm}$ each
   
-## STEP-7: Create a RECTANGLE 
-1.	Select Sketch > RECTANGLE  > CENTER RECTANGLE.
-2.	Now hover over the origin (center) of the sketch. You should see the cursor snap to this location.
-3.	Click once to begin placing the RECTANGLE.
-4.	Type the Tab button and enter the values 40mm and 10mm for the width and height respectively
-5.	Click again to place the RECTANGLE.
-6.	Click Finish Sketch after completing.
+* **Vertical / Rib Block:**
+* Height from base: 32mm
+* Width: 40𝑚𝑚
+* Thickness of base block/wall offset: 10𝑚𝑚
+* Triangular Web/Rib thickness: 12𝑚𝑚
+  
+* **Upper Arm:**
+* Horizontal extension length: 32𝑚𝑚
+* Height/Thickness: 10mm
+  
+* **Upper Cylindrical Boss:**
+* Outer Diameter: $\varnothing30\text{ mm}$
+* Inner Hole Diameter: $\varnothing20\text{ mm}$
+* Total Boss Height: 10𝑚𝑚 protruding above the arm
 
-## STEP-8:  Extrude RECTANGLE 
-1.	Select Extrude.
-2.	Select the Rectangle sketch.
-3.	Click again to place the value.
-4.	Type in the value of 32mm. 
-5.	Press ENTER to accept the value.
+## Step-by-Step Procedure
 
-## STEP-9: Create a TRIANGLE 
-1.	Select Sketch > TRIANGLE > CENTER TRIANGLE .
-2.	Now hover over the origin (center) of the sketch. You should see the cursor snap to this location.
-3.	Click once to begin placing the TRIANGLE.
-4.	Type the Tab button and enter the values 32mm and 12mm for the width and height respectively
-5.	Click again to place the TRIANGLE.
-6.	Click Finish Sketch after completing.
+Step 1: Environment Setup
 
-## STEP-10:  Extrude TRIANGLE
-1.	Select Extrude.
-2.	Select the TRIANGLE sketch.
-3.	Click again to place the value.
-4.	Type in the value of 6mm in both direction option. 
-5.	Press ENTER to accept the value.
+1. Open the CAD software and create a **New Part File** (`.prt` or
+`.sldprt`).
+2. Set the unit system to **MMGS** (Millimeter, Gram, Second).
 
-## STEP-11: Create a PENTAGON 
-1.	Select Sketch > polygon > circumscribed polygon.
-2.	Now hover over the origin (center) of the sketch. You should see the cursor snap to this location.
-3.	Click once to begin placing the polygon.
-4.	Type the Tab button and enter the values 40mm and 30mm, for the width and height respectively and Choose 3 Side
-5.	Click again to place the polygon.
-6.	Click Finish Sketch after completing.
+Step 2: Modeling the Base Plate
 
-## STEP-12: Extrude PENTAGON
-1.	Select Extrude.
-2.	Select the PENTAGON sketch.
-3.	Click again to place the value.
-4.	Type in the value of 10mm. 
-5.	Press ENTER to accept the value.
+1. Select the **Top Plane** and create a new sketch.
+2. Draw two circles of diameter 16mm spaced 56mm apart
+horizontally along the center axis.
+3. Draw concentric arcs of radius 𝑅18𝑚𝑚 around each circle
+center
+4. Connect the outer arcs with tangent lines to complete the
+slot-like base boundary.
+5. Extrude the sketch upwards using **Extrude Boss/Base** with
+a height/depth of ** 8𝑚𝑚 **
 
-## STEP-13: Create a CIRCLE 
-1.	Select Sketch > CIRCLE > CENTER CIRCLE.
-2.	Now hover over the origin (Pentagan end side) of the sketch. You should see the cursor snap to this location.
-3.	Click once to begin placing the CIRCLE.
-4.	Type the Tab button and enter the value DIA 30mm and 20mm, inner and outer diameter respectively .
-5.	Click again to place the circle.
-6.	Click Finish Sketch after completing.
 
-## STEP-14:  Extrude CIRCLE 
-1.	Select Extrude.
-2.	Select the pentogan sketch.
-3.	Click again to place the value.
-4.	Type in the value of 10mm on both side. 
-5.	Press ENTER to accept the value.
+<img width="1226" height="560" alt="image" src="https://github.com/user-attachments/assets/c8fbfe5d-1923-4a20-986f-edff015e5f04" />
 
-## INPUT:
-![image](https://user-images.githubusercontent.com/113594316/198523331-05ace360-502b-4569-b9b4-31c60e3cd554.png)
+Step 3: Modeling the Vertical Block
 
-Output:
+1. Select the top surface of the base plate (or the **Front/Right
+Plane**) to create the central vertical support profile.
+2. Sketch a rectangle with a width of ** 40𝑚𝑚 **, thickness of
+**10𝑚𝑚 ** and height of **32𝑚𝑚 ** rising above the top surface of
+the base.
+3. Apply **Extrude Boss/Base** to create the solid vertical block.
+
+
+<img width="1121" height="743" alt="image" src="https://github.com/user-attachments/assets/2bd79cc6-3851-4d2b-9ca3-1f2ca039a581" />
+
+Step 4: Creating the Triangular Support Rib (Stiffener)
+
+1. Select the symmetry plane (e.g., **Right Plane** or mid-plane
+passing through the center of the part).
+2. Draw a right-angled triangle sketch connecting the top rear
+edge of the vertical block to the top face of the base plate.
+3. Use the **Rib Feature** (or **Extrude Mid-Plane**) with a
+specified thickness of **12𝑚𝑚 **.
+
+
+<img width="1032" height="572" alt="image" src="https://github.com/user-attachments/assets/c77cf8dc-b281-432b-96e6-fcb9a1c159d8" />
+
+Step 5: Modeling the Upper Cantilever Arm
+
+1. Select the front face of the vertical block.
+2. Create a sketch extending forward horizontally:
+* Extension length = ** 32𝑚𝑚 **
+* Height/Thickness = ** 10𝑚𝑚 **
+* Width = ** 40𝑚𝑚 ** (matching the vertical block width)
+3. Extrude the sketch to create the horizontal cantilever portion.
+
+Step 6: Modeling the Upper Cylindrical Boss & Center Hole
+
+1. Select the top surface of the upper cantilever arm or a parallel
+plane.
+2. Draw a circle of diameter **$\varnothing30\text{ mm}$**
+centered at the front end of the arm.
+3. Extrude this sketch upwards by ** 10𝑚𝑚 **.
+4. Select the top face of the new cylinder, sketch a concentric
+circle of diameter **$\varnothing20\text{ mm}$**.
+5. Apply **Extruded Cut** with the condition **Through All** to
+create the central hole.
+
+
+<img width="1207" height="610" alt="image" src="https://github.com/user-attachments/assets/e7804151-fdb7-4faf-98f1-a3996d0364af" />
+
+Step 7: Final Inspection & File Saving
+
+1. Inspect the feature tree to ensure proper parent-child relations
+and fully constrained sketches.
+2. Check all dimensions against the drawing.
+3. Apply appearance/material (e.g., Magenta/Purple color as seen
+in the source image) if required.
+4. Save the file as `Mechanical_Bracket.SLDPRT` (or
+corresponding extension).
+
+## Output:
+
+
+<img width="1142" height="765" alt="image" src="https://github.com/user-attachments/assets/8b7fd329-8571-4c38-a35b-ee9b06bc6f88" />
+
+
+<img width="1192" height="817" alt="image" src="https://github.com/user-attachments/assets/ee3fc420-608a-4fc3-a670-b7778404ef24" />
 
 ## RESULT: 
-Thus, the 3D model is created from given isometric drawing.
-
-
+Thus the given sketch is drawn and drafted using fusion 360
+tool.
